@@ -3,38 +3,34 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-    await queryInterface.createTable('equipamentosdagarantia', {
+    await queryInterface.createTable('Historicochamados', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
-      },
-      tipo: {
-        type : Sequelize.STRING,
+    },
+      codchamado: {
+        type : Sequelize.INTEGER,
         allowNull : false
     },
-    serie: {
+    statuschamado: {
         type : Sequelize.STRING,
         allowNull : true
     },
-    modelo: {
+    descricao: {
       type : Sequelize.STRING,
       allowNull : true
-  },
-    codcliente: {
-        type : Sequelize.BIGINT,
-        allowNull : true
     },
-    datadocadastrogarantia: {
-        type : Sequelize.DATE,
-        allowNull : false
-    },           
-      createdAt: {
+    datamovimentacao: {
+      type: Sequelize.DATE,
+      allowNull: false
+    },        
+    createdAt: {
         allowNull: false,
         type: Sequelize.DATE
-      },
-      updatedAt: {
+    },
+    updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
       }

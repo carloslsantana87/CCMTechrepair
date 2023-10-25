@@ -1,30 +1,26 @@
 const { DataTypes } = require("sequelize");
 
 module.exports = (sequelize, DataTypes) => {
-    const Equipamentos = sequelize.define('Equipamentos', {
-        tipo: {
+    const Historicochamados = sequelize.define('Historicochamados', {
+        codchamado: {
+            type : DataTypes.INTEGER,
+            allowNull : false
+        },
+        statuschamado: {
             type : DataTypes.STRING,
             allowNull : false
         },
-        serie: {
+        descricao: {
             type : DataTypes.STRING,
             allowNull : false
         },
-        modelo: {
-            type : DataTypes.STRING,
-            allowNull : false
-        },
-        codcliente: {
-            type : DataTypes.BIGINT,
-            allowNull : true
-        },
-        datadocadastrogarantia: {
+        
+        datamovimentacao: {
             type : DataTypes.DATE,
             allowNull : false
         }, 
-                     
+                       
     });
 
-    return Equipamentos;
-
+    return Historicochamados;
 };

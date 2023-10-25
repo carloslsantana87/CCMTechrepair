@@ -1,56 +1,49 @@
 const { DataTypes } = require("sequelize");
 
 module.exports = (sequelize, DataTypes) => {
-    const Clientes = sequelize.define('Clientes', {
-        nome: {
+    const Chamados = sequelize.define('Chamados', {
+        codcliente: {
+            type : DataTypes.INTEGER,
+            allowNull : false
+        },
+        nomecontchamado: {
             type : DataTypes.STRING,
             allowNull : false
         },
-        tipo: {
+        fonecontchamado: {
             type : DataTypes.STRING,
             allowNull : false
         },
-        cnpj: {
-            type : DataTypes.BIGINT,
+        serie: {
+            type : DataTypes.STRING,
             allowNull : true
         },
-        cpf: {
-            type : DataTypes.BIGINT,
+        statuschamado: {
+            type : DataTypes.STRING,
             allowNull : true
         },
-        cep: {
+        tipochamado: {
+            type : DataTypes.STRING,
+            allowNull : true
+        },
+        nivelacompanhamento: {
             type : DataTypes.INTEGER,
             allowNull : true
         },
-        endereco: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        numero: {
+        nivelacesso: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
-        complemento: {
+        descricao: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        bairro: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        cidade: {
-            type: DataTypes.STRING,
-            allowNull: false
-          },
         datadocadastro: {
             type : DataTypes.DATE,
             allowNull : false
         }, 
-        email: {
-            type : DataTypes.STRING,
-            allowNull : false
-        },                
+                       
     });
 
-    return Clientes;
+    return Chamados;
 };
