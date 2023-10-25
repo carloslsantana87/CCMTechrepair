@@ -1,21 +1,14 @@
-const nodemailer = require('nodemailer');
+// app.js
 
-var transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    porta: 587, 
-    secure: true,
-    auth:{
-        user: "ccmtechrepairtechrepair@gmail.com",
-        pass: "juox rrrt rtzo rlul"
-    }
-});
 
 const {Sequelize, DataTypes} = require('sequelize');
 const config = require('./config/config.js');
+const email = require('./config/email.js')
 const clienteModel = require('./models/clientes.js');
 const sequelize = new Sequelize(config.development);
 const clienteCad = clienteModel(sequelize, DataTypes);
 async function run() {
+
 
     try {
         //Cadastro de Pedidos
@@ -49,7 +42,7 @@ run();
 
 
 
-transporter.sendMail({
+/*transporter.sendMail({
     from: "CCM - Techrepair <ccmtechrepairtechrepair@gmail.com>",
     to: "carloslsantana87@gmail.com",
     subject: "Teste",
@@ -58,4 +51,4 @@ transporter.sendMail({
     console.log(message)
 }).catch(err => {
     console.log(err);
-});
+});*/
