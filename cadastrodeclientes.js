@@ -1,5 +1,14 @@
-// app.js
+const nodemailer = require('nodemailer');
 
+var transporter = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    porta: 587, 
+    secure: true,
+    auth:{
+        user: "ccmtechrepairtechrepair@gmail.com",
+        pass: "juox rrrt rtzo rlul"
+    }
+});
 
 const {Sequelize, DataTypes} = require('sequelize');
 const config = require('./config/config.js');
@@ -38,9 +47,11 @@ async function run() {
 }
 run();
 
+
+
 transporter.sendMail({
     from: "CCM - Techrepair <ccmtechrepairtechrepair@gmail.com>",
-    to: email,
+    to: "carloslsantana87@gmail.com",
     subject: "Teste",
     text: "Você agora é cliente da Techrepair - Seja BEM-VINDO!!!"
 }).then(message => {
