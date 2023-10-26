@@ -18,7 +18,7 @@ const sequelize = new Sequelize(config.development);
 const clienteCad = clienteModel(sequelize, DataTypes);
 async function run() {
 
-var idcliente = id;
+
 var nomeCli = "HERMES BIJUTERIA";
 var tipoCli = "FISICA";
 var cnpjCli = 99009898000922;
@@ -30,7 +30,7 @@ var complementoCli = "Apt 305";
 var bairroCli = "Afogados";
 var cidadeCli = "Recife";
 var datadocadastroCli = 25-10-2023;
-var emailCLi = "carloslsantana87@gmail.com";
+var emailCLi = "clauber@outlook.com";
 
 
 
@@ -56,7 +56,12 @@ var emailCLi = "carloslsantana87@gmail.com";
             to: emailCLi,
             subject: "Teste",
             text: `Você fez o seu cadastro na TecRephair
-                   Seus dados são: ${id} ${nomeCli}, no endereço ${ruaCli}`
+                   Seus dados foram cadastrados: 
+                   Numero do cliente: 
+                   Nome do cliente: ${nomeCli}
+                   Endereço: ${ruaCli} ${numeCLi} ${complementoCli} ${bairroCli} ${cidadeCli} ${cepCli}
+                   cnpj: ${cnpjCli}
+                   cpf: ${cpfCli}`
         }).then(message => {
             console.log(message)
         }).catch(err => {
