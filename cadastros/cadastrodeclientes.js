@@ -2,9 +2,9 @@
 
 
 const {Sequelize, DataTypes} = require('sequelize');
-const config = require('./config/config.js');
-const email = require('./config/email.js')
-const clienteModel = require('./models/clientes.js');
+const config = require('../config/config.js');
+const email = require('../config/email.js')
+const clienteModel = require('../models/clientes.js');
 const sequelize = new Sequelize(config.development);
 const clienteCad = clienteModel(sequelize, DataTypes);
 async function run() {
