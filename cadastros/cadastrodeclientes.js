@@ -13,17 +13,17 @@ async function run() {
     try {
         //Cadastro de Pedidos
         const cadcliente = await clienteCad.create({
-            nome: "Claudio Moreira de Azevedo",
-            tipo: "PESSOA FISICA",
-            cnpj: 0,
-            cpf:  381310400,
-            cep: 53403610,
-            endereco: "Av. Antonio Cabral de Souza",
-            numero: 350,
-            complemento: "Apt 703",
-            bairro: "Torres Galvao",
-            cidade: "Paulista",
-            datadocadastro: 16-10-2023,
+            nome: "CARLOS LUIZ DE SANTANA",
+            tipo: "JURIDICA",
+            cnpj: 99009898000978,
+            cpf:  0,
+            cep: 50770500,
+            endereco: "Rua Francisco Porfirio",
+            numero: 175,
+            complemento: "Apt 305",
+            bairro: "Afogados",
+            cidade: "Recife",
+            datadocadastro: 25-10-2023,
             email: "carloslsantana87g@gmail.com"
         });
         const cadastro = await clienteCad.findAll();
