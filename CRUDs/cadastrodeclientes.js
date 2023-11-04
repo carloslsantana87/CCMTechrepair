@@ -2,36 +2,35 @@ const nodemailer = require('nodemailer');
 
 var transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
-    porta: 587, 
+    porta: 587,
     secure: true,
-    auth:{
+    auth: {
         user: "ccmtechrepairtechrepair@gmail.com",
         pass: "juox rrrt rtzo rlul"
     }
 });
 
-const {Sequelize, DataTypes} = require('sequelize');
+const { Sequelize, DataTypes } = require('sequelize');
 const config = require('../config/config.js');
 const email = require('../config/email.js')
 const clienteModel = require('../models/clientes.js');
+const clientes = require('../models/clientes.js');
 const sequelize = new Sequelize(config.development);
 const clienteCad = clienteModel(sequelize, DataTypes);
 async function run() {
 
-
-var nomeCli = "HERMES BIJUTERIA";
-var tipoCli = "FISICA";
-var cnpjCli = 99009898000922;
-var cpfCli = 0;
-var cepCli = 50770500;
-var ruaCli = "Rua Francisco Porfirio";
-var numeCLi = 175;
-var complementoCli = "Apt 305";
-var bairroCli = "Afogados";
-var cidadeCli = "Recife";
-var datadocadastroCli = 25-10-2023;
-var emailCLi = "clauber@outlook.com";
-
+    var nomeCli = "AMANDA COSMETICOS";
+    var tipoCli = "FISICA";
+    var cnpjCli = 99009898000922;
+    var cpfCli = 0;
+    var cepCli = 50770500;
+    var ruaCli = "Rua Francisco Porfirio";
+    var numeCLi = 175;
+    var complementoCli = "Apt 305";
+    var bairroCli = "Afogados";
+    var cidadeCli = "Recife";
+    var datadocadastroCli = 25 - 10 - 2023;
+    var emailCLi = "carloslsantana87@gmail.com";
 
 
     try {
@@ -40,7 +39,7 @@ var emailCLi = "clauber@outlook.com";
             nome: nomeCli,
             tipo: tipoCli,
             cnpj: cnpjCli,
-            cpf:  cpfCli,
+            cpf: cpfCli,
             cep: cepCli,
             endereco: ruaCli,
             numero: numeCLi,
@@ -71,13 +70,17 @@ var emailCLi = "clauber@outlook.com";
 
     } catch (error) {
         console.error('Erro: ', error.message);
-        
+
     } finally {
         // Fechar conexão com banco de dados
         await clienteCad.sequelize.close();
     }
+    
+    /*(async () => {
+        const listadeclientes = await clientes.findByPk(1);
+    
+    console.log(listadeclientes);
+    });*/
 
 }
 run();
-
-
