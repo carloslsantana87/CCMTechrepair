@@ -19,7 +19,7 @@ const sequelize = new Sequelize(config.development);
 const clienteCad = clienteModel(sequelize, DataTypes);
 async function run() {
 
-    var nomeCli = "AMANDA COSMETICOS";
+    var nomeCli = "AMANDA CABELEREIRO";
     var tipoCli = "FISICA";
     var cnpjCli = 99009898000922;
     var cpfCli = 0;
