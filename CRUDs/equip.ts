@@ -11,7 +11,7 @@ async function run() {
     try {
         //Cadastro de Pedidos
         const cadEquipa = await equipaCad.create({
-            tipo: "PC",
+            tipo: "SERVIDOR",
             serie: "4CBX76890988",
             modelo: "HP-45698-FULL PROTECT",
             codcliente: 1,
