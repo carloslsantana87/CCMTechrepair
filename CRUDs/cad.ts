@@ -19,18 +19,18 @@ const sequelize = new Sequelize(config.development);
 const clienteCad = clienteModel(sequelize, DataTypes);
 async function run() {
 
-    var nomeCli = "AMANDA CABELEREIRO";
-    var tipoCli = "FISICA";
-    var cnpjCli = 99009898000922;
-    var cpfCli = 0;
-    var cepCli = 50770500;
-    var ruaCli = "Rua Francisco Porfirio";
-    var numeCLi = 175;
-    var complementoCli = "Apt 305";
-    var bairroCli = "Afogados";
-    var cidadeCli = "Recife";
-    var datadocadastroCli = 25 - 10 - 2023;
-    var emailCLi = "carloslsantana87@gmail.com";
+    var nomeCli : string = "AMANDA CABELEREIRO";
+    var tipoCli : string = "FISICA";
+    var cnpjCli : number = 99009898000922;
+    var cpfCli : number = 0;
+    var cepCli : number = 50770500;
+    var ruaCli : string = "Rua Francisco Porfirio";
+    var numeCLi: number = 175;
+    var complementoCli : string = "Apt 305";
+    var bairroCli: string = "Afogados";
+    var cidadeCli : string = "Recife";
+    var datadocadastroCli : Date = 25 - 10 - 2023;
+    var emailCLi : string = "carloslsantana87@gmail.com";
 
 
     try {
