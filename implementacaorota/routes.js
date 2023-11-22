@@ -1,9 +1,10 @@
-express from "express";
+const express = require('express');
+const app = express();
 
-const routes = express.Router();
+const porta = process.env.PORT;
 
-routes.get("/", (req, res) => {
-  return res.json({ name: "Ciclano Fulano" });
+app.get('/', (req, res)=> {
+    res.send('Iniciando!');
 });
 
-export { routes as default };
+app.listen(porta || 3000, () => {console.log('Servidor Rodando')});
