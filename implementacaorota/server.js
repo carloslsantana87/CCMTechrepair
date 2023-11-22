@@ -1,5 +1,5 @@
-import express from "express";
-import routes from "./routes.js";
+express from "express";
+routes from "./implementacaorota/routes.js";
 
 const app = express();
 
