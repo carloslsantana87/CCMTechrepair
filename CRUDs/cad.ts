@@ -50,6 +50,7 @@ async function run() {
             email: emailCLi
         });
         const cadastro = await clienteCad.findAll();
+        
         transporter.sendMail({
             from: "CCM - Techrepair <ccmtechrepairtechrepair@gmail.com>",
             to: emailCLi,
