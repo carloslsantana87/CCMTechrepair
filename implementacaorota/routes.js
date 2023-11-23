@@ -3,7 +3,7 @@ const app = express();
 
 const porta = process.env.PORT;
 
-app.get('/', (req, res)=> {
+app.get('/cruds', (req, res)=> {
     res.send('Iniciando!');
 });
 
