@@ -1,7 +1,7 @@
 const express = require('express');
 const clientes = express("./rotacliente.js");
 
-const rotas = (app) => {
+const routers = (app) => {
     app.rotas('/').get((req, res)=>{
         res.status(200).send({titulo: "curso estudo"})
     })
@@ -10,4 +10,4 @@ const rotas = (app) => {
     clientes
     )
 }
-module.exports = rotas;
+module.exports = routers;
