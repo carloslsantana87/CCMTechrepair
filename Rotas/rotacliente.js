@@ -3,7 +3,7 @@ const { Model } = require('sequelize');
 const rotear = express.Router();
 
 rotear
-    .get("/CRUDs", (req,res) => {
+    .get("/", (req,res) => {
       console.log("Busca!")
     });
 
