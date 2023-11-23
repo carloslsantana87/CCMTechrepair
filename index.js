@@ -5,8 +5,9 @@ const porta = 3000;
 const rotas = require("./rotas/index.js ");
 
 app.use(bodyParser.jason());
+
 rotas(app);
 
-app.listen(port, ()=> {
+app.listen(porta, ()=> {
     console.log(`Servidor ${porta}`)
 })
